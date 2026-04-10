@@ -13,6 +13,7 @@ import { FerrofluidHero } from './components/FerrofluidHero';
 import { QuantumHero } from './components/QuantumHero';
 import { EclipseHero } from './components/EclipseHero';
 import { RiftHero } from './components/RiftHero';
+import { ConvergenceHero } from './components/ConvergenceHero';
 
 export default function App() {
   return (
@@ -27,6 +28,7 @@ export default function App() {
       <QuantumHero />
       <EclipseHero />
       <RiftHero />
+      <ConvergenceHero />
     </div>
   );
 }
