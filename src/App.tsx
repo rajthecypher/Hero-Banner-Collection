@@ -17,6 +17,7 @@ import { ConvergenceHero } from './components/ConvergenceHero';
 import { ArchitectureHero } from './components/ArchitectureHero';
 import { CoreHero } from './components/CoreHero';
 import { SpeedyInventoryAdvanced } from './components/SpeedyInventoryAdvanced';
+import { SpeedyInventoryShift } from './components/SpeedyInventoryShift';
 import { ScrollRevealHero } from './components/ScrollRevealHero';
 
 export default function App() {
@@ -36,6 +37,7 @@ export default function App() {
       <ArchitectureHero />
       <CoreHero />
       <SpeedyInventoryAdvanced />
+      <SpeedyInventoryShift />
       <ScrollRevealHero />
     </div>
   );
