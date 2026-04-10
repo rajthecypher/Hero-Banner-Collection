@@ -14,6 +14,10 @@ import { QuantumHero } from './components/QuantumHero';
 import { EclipseHero } from './components/EclipseHero';
 import { RiftHero } from './components/RiftHero';
 import { ConvergenceHero } from './components/ConvergenceHero';
+import { ArchitectureHero } from './components/ArchitectureHero';
+import { CoreHero } from './components/CoreHero';
+import { SpeedyInventoryAdvanced } from './components/SpeedyInventoryAdvanced';
+import { ScrollRevealHero } from './components/ScrollRevealHero';
 
 export default function App() {
   return (
@@ -29,6 +33,10 @@ export default function App() {
       <EclipseHero />
       <RiftHero />
       <ConvergenceHero />
+      <ArchitectureHero />
+      <CoreHero />
+      <SpeedyInventoryAdvanced />
+      <ScrollRevealHero />
     </div>
   );
 }
