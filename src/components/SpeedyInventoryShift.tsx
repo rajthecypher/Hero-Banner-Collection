@@ -56,7 +56,7 @@ export const SpeedyInventoryShift = () => {
             </h2>
 
             {/* Messy Note 1 */}
-            <motion.div style={{ y: y1 }} className="absolute top-[10%] md:top-[15%] left-[2%] md:left-[10%] rotate-[-6deg] bg-[#fef08a] p-3 md:p-6 shadow-xl max-w-[200px] md:max-w-xs border border-[#fde047]">
+            <motion.div style={{ y: y1 }} className="absolute top-[10%] md:top-[12%] left-[2%] md:left-[5%] rotate-[-6deg] bg-[#fef08a] p-3 md:p-6 shadow-xl max-w-[200px] md:max-w-xs border border-[#fde047] pointer-events-auto">
               <div className="text-red-600 font-bold text-sm md:text-xl mb-1 md:mb-2 flex items-center gap-1 md:gap-2">
                 <FileSignature className="w-4 h-4 md:w-6 md:h-6 shrink-0" /> Handwritten
               </div>
@@ -65,7 +65,7 @@ export const SpeedyInventoryShift = () => {
             </motion.div>
 
             {/* Messy Note 2 */}
-            <motion.div style={{ y: y2 }} className="absolute top-[35%] md:top-[40%] right-[2%] md:right-[15%] rotate-[4deg] bg-white p-3 md:p-6 shadow-2xl max-w-[220px] md:max-w-sm border border-slate-200">
+            <motion.div style={{ y: y2 }} className="absolute top-[35%] md:top-[15%] right-[2%] md:right-[5%] rotate-[4deg] bg-white p-3 md:p-6 shadow-2xl max-w-[220px] md:max-w-sm border border-slate-200 pointer-events-auto">
               <div className="text-red-600 font-bold text-sm md:text-xl mb-1 md:mb-2 flex items-center gap-1 md:gap-2">
                 <HelpCircle className="w-4 h-4 md:w-6 md:h-6 shrink-0" /> "Unaccounted for"
               </div>
@@ -76,7 +76,7 @@ export const SpeedyInventoryShift = () => {
             </motion.div>
 
             {/* Messy Note 3 */}
-            <motion.div style={{ y: y3 }} className="absolute top-[65%] md:top-[60%] left-[5%] md:left-[25%] rotate-[-3deg] bg-[#fecaca] p-3 md:p-6 shadow-lg max-w-[200px] md:max-w-xs border border-[#fca5a5]">
+            <motion.div style={{ y: y3 }} className="absolute top-[65%] md:top-[65%] left-[5%] md:left-[8%] rotate-[-3deg] bg-[#fecaca] p-3 md:p-6 shadow-lg max-w-[200px] md:max-w-xs border border-[#fca5a5] pointer-events-auto">
               <div className="text-red-800 font-bold text-sm md:text-xl mb-1 md:mb-2 flex items-center gap-1 md:gap-2">
                 <Scale className="w-4 h-4 md:w-6 md:h-6 shrink-0" /> Claim disputes
               </div>
@@ -84,7 +84,7 @@ export const SpeedyInventoryShift = () => {
             </motion.div>
 
             {/* Messy Note 4 (Hidden on mobile to reduce clutter) */}
-            <motion.div style={{ y: y4 }} className="hidden md:block absolute bottom-[15%] right-[30%] rotate-[8deg] bg-[#e2e8f0] p-6 shadow-xl max-w-xs border border-slate-300">
+            <motion.div style={{ y: y4 }} className="hidden md:block absolute top-[45%] md:top-[50%] right-[5%] md:right-[10%] rotate-[8deg] bg-[#e2e8f0] p-6 shadow-xl max-w-xs border border-slate-300 pointer-events-auto">
               <div className="text-slate-800 font-bold text-xl mb-2 flex items-center gap-2">
                 <Hourglass className="w-6 h-6" /> Foreman bottleneck
               </div>
@@ -92,7 +92,7 @@ export const SpeedyInventoryShift = () => {
             </motion.div>
 
             {/* Messy Note 5 (Hidden on mobile to reduce clutter) */}
-            <motion.div style={{ y: y5 }} className="hidden md:block absolute bottom-[30%] left-[15%] rotate-[-8deg] bg-[#fef08a] p-6 shadow-2xl max-w-xs border border-[#fde047]">
+            <motion.div style={{ y: y5 }} className="hidden md:block absolute bottom-[10%] md:bottom-[15%] left-[20%] md:left-[35%] rotate-[-8deg] bg-[#fef08a] p-6 shadow-2xl max-w-xs border border-[#fde047] pointer-events-auto">
               <div className="text-red-600 font-bold text-xl mb-2 flex items-center gap-2">
                 <EyeOff className="w-6 h-6" /> Zero visibility
               </div>
@@ -127,59 +127,141 @@ export const SpeedyInventoryShift = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6 max-w-lg md:max-w-none mx-auto w-full">
               
               {/* Card 1 */}
-              <div className="md:col-span-2 bg-slate-900/50 backdrop-blur-xl border border-cyan-500/20 p-3 md:p-8 rounded-2xl md:rounded-3xl shadow-[0_0_30px_rgba(6,182,212,0.05)] hover:border-cyan-500/50 transition-colors group flex md:block items-center gap-4 md:gap-0">
-                <div className="shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-cyan-500/10 flex items-center justify-center md:mb-6 group-hover:scale-110 transition-transform">
-                  <Smartphone className="text-cyan-400 w-6 h-6 md:w-7 md:h-7" />
+              <motion.div 
+                whileHover="hover" initial="initial"
+                className="md:col-span-2 bg-slate-900/50 backdrop-blur-xl border border-cyan-500/20 p-3 md:p-8 rounded-2xl md:rounded-3xl shadow-[0_0_30px_rgba(6,182,212,0.05)] hover:border-cyan-500/50 transition-colors group flex md:block items-center gap-4 md:gap-0 cursor-pointer overflow-hidden relative"
+              >
+                <motion.div 
+                  className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-transparent opacity-0"
+                  variants={{ hover: { opacity: 1 } }}
+                  transition={{ duration: 0.3 }}
+                />
+                <div className="shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-cyan-500/10 flex items-center justify-center md:mb-6 relative overflow-hidden">
+                  <Smartphone className="text-cyan-400 w-6 h-6 md:w-7 md:h-7 relative z-10" />
+                  <motion.div 
+                    className="absolute left-0 right-0 h-0.5 bg-cyan-400 shadow-[0_0_8px_#22d3ee]"
+                    variants={{
+                      initial: { top: '-10%', opacity: 0 },
+                      hover: { top: ['-10%', '110%'], opacity: [0, 1, 1, 0], transition: { duration: 1.5, repeat: Infinity, ease: "linear" } }
+                    }}
+                  />
                 </div>
-                <div>
+                <div className="relative z-10">
                   <h3 className="text-sm md:text-2xl font-bold text-white mb-0.5 md:mb-3 leading-tight">Digital photographic inventory</h3>
                   <p className="text-slate-400 text-xs md:text-lg leading-snug">Every single item is photographed, logged, and timestamped in seconds.</p>
                 </div>
-              </div>
+              </motion.div>
 
               {/* Card 2 */}
-              <div className="md:col-span-1 bg-slate-900/50 backdrop-blur-xl border border-cyan-500/20 p-3 md:p-8 rounded-2xl md:rounded-3xl shadow-[0_0_30px_rgba(6,182,212,0.05)] hover:border-cyan-500/50 transition-colors group flex md:block items-center gap-4 md:gap-0">
-                <div className="shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-blue-500/10 flex items-center justify-center md:mb-6 group-hover:scale-110 transition-transform">
-                  <MapPin className="text-blue-400 w-6 h-6 md:w-7 md:h-7" />
+              <motion.div 
+                whileHover="hover" initial="initial"
+                className="md:col-span-1 bg-slate-900/50 backdrop-blur-xl border border-cyan-500/20 p-3 md:p-8 rounded-2xl md:rounded-3xl shadow-[0_0_30px_rgba(6,182,212,0.05)] hover:border-cyan-500/50 transition-colors group flex md:block items-center gap-4 md:gap-0 cursor-pointer overflow-hidden relative"
+              >
+                <motion.div 
+                  className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent opacity-0"
+                  variants={{ hover: { opacity: 1 } }}
+                  transition={{ duration: 0.3 }}
+                />
+                <div className="shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-blue-500/10 flex items-center justify-center md:mb-6 relative overflow-hidden">
+                  <MapPin className="text-blue-400 w-6 h-6 md:w-7 md:h-7 relative z-10" />
+                  <motion.div 
+                    className="absolute inset-0 border-2 border-blue-400 rounded-xl md:rounded-2xl"
+                    variants={{
+                      initial: { scale: 0.8, opacity: 0 },
+                      hover: { scale: [0.8, 1.5], opacity: [1, 0], transition: { duration: 1.5, repeat: Infinity, ease: "easeOut" } }
+                    }}
+                  />
                 </div>
-                <div>
+                <div className="relative z-10">
                   <h3 className="text-sm md:text-2xl font-bold text-white mb-0.5 md:mb-3 leading-tight">Full item tracking</h3>
                   <p className="text-slate-400 text-xs md:text-lg leading-snug">GPS, time-stamp, and a complete crew member audit trail.</p>
                 </div>
-              </div>
+              </motion.div>
 
               {/* Card 3 */}
-              <div className="md:col-span-1 bg-slate-900/50 backdrop-blur-xl border border-cyan-500/20 p-3 md:p-8 rounded-2xl md:rounded-3xl shadow-[0_0_30px_rgba(6,182,212,0.05)] hover:border-cyan-500/50 transition-colors group flex md:block items-center gap-4 md:gap-0">
-                <div className="shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-emerald-500/10 flex items-center justify-center md:mb-6 group-hover:scale-110 transition-transform">
-                  <Camera className="text-emerald-400 w-6 h-6 md:w-7 md:h-7" />
+              <motion.div 
+                whileHover="hover" initial="initial"
+                className="md:col-span-1 bg-slate-900/50 backdrop-blur-xl border border-cyan-500/20 p-3 md:p-8 rounded-2xl md:rounded-3xl shadow-[0_0_30px_rgba(6,182,212,0.05)] hover:border-cyan-500/50 transition-colors group flex md:block items-center gap-4 md:gap-0 cursor-pointer overflow-hidden relative"
+              >
+                <motion.div 
+                  className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-transparent opacity-0"
+                  variants={{ hover: { opacity: 1 } }}
+                  transition={{ duration: 0.3 }}
+                />
+                <div className="shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-emerald-500/10 flex items-center justify-center md:mb-6 relative overflow-hidden">
+                  <Camera className="text-emerald-400 w-6 h-6 md:w-7 md:h-7 relative z-10" />
+                  <motion.div 
+                    className="absolute inset-0 bg-emerald-400"
+                    variants={{
+                      initial: { opacity: 0 },
+                      hover: { opacity: [0, 0.5, 0], transition: { duration: 1.5, repeat: Infinity, times: [0, 0.1, 1] } }
+                    }}
+                  />
                 </div>
-                <div>
+                <div className="relative z-10">
                   <h3 className="text-sm md:text-2xl font-bold text-white mb-0.5 md:mb-3 leading-tight">Claims resolved instantly</h3>
                   <p className="text-slate-400 text-xs md:text-lg leading-snug">Undeniable photo proof of condition at every step.</p>
                 </div>
-              </div>
+              </motion.div>
 
               {/* Card 4 */}
-              <div className="md:col-span-1 bg-slate-900/50 backdrop-blur-xl border border-cyan-500/20 p-3 md:p-8 rounded-2xl md:rounded-3xl shadow-[0_0_30px_rgba(6,182,212,0.05)] hover:border-cyan-500/50 transition-colors group flex md:block items-center gap-4 md:gap-0">
-                <div className="shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-purple-500/10 flex items-center justify-center md:mb-6 group-hover:scale-110 transition-transform">
-                  <Users className="text-purple-400 w-6 h-6 md:w-7 md:h-7" />
+              <motion.div 
+                whileHover="hover" initial="initial"
+                className="md:col-span-1 bg-slate-900/50 backdrop-blur-xl border border-cyan-500/20 p-3 md:p-8 rounded-2xl md:rounded-3xl shadow-[0_0_30px_rgba(6,182,212,0.05)] hover:border-cyan-500/50 transition-colors group flex md:block items-center gap-4 md:gap-0 cursor-pointer overflow-hidden relative"
+              >
+                <motion.div 
+                  className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent opacity-0"
+                  variants={{ hover: { opacity: 1 } }}
+                  transition={{ duration: 0.3 }}
+                />
+                <div className="shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-purple-500/10 flex items-center justify-center md:mb-6 relative overflow-hidden">
+                  <Users className="text-purple-400 w-6 h-6 md:w-7 md:h-7 relative z-10" />
+                  <motion.div 
+                    className="absolute w-[150%] h-[150%] border-2 border-purple-400/30 rounded-full border-t-transparent border-b-transparent"
+                    variants={{
+                      initial: { rotate: 0 },
+                      hover: { rotate: 360, transition: { duration: 3, repeat: Infinity, ease: "linear" } }
+                    }}
+                  />
+                  <motion.div 
+                    className="absolute w-[100%] h-[100%] border-2 border-purple-400/50 rounded-full border-l-transparent border-r-transparent"
+                    variants={{
+                      initial: { rotate: 0 },
+                      hover: { rotate: -360, transition: { duration: 2, repeat: Infinity, ease: "linear" } }
+                    }}
+                  />
                 </div>
-                <div>
+                <div className="relative z-10">
                   <h3 className="text-sm md:text-2xl font-bold text-white mb-0.5 md:mb-3 leading-tight">All crew scan simultaneously</h3>
                   <p className="text-slate-400 text-xs md:text-lg leading-snug">Including temp labor. Zero bottlenecks. Maximum efficiency.</p>
                 </div>
-              </div>
+              </motion.div>
 
               {/* Card 5 */}
-              <div className="md:col-span-1 bg-slate-900/50 backdrop-blur-xl border border-cyan-500/20 p-3 md:p-8 rounded-2xl md:rounded-3xl shadow-[0_0_30px_rgba(6,182,212,0.05)] hover:border-cyan-500/50 transition-colors group flex md:block items-center gap-4 md:gap-0">
-                <div className="shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-indigo-500/10 flex items-center justify-center md:mb-6 group-hover:scale-110 transition-transform">
-                  <Globe className="text-indigo-400 w-6 h-6 md:w-7 md:h-7" />
+              <motion.div 
+                whileHover="hover" initial="initial"
+                className="md:col-span-1 bg-slate-900/50 backdrop-blur-xl border border-cyan-500/20 p-3 md:p-8 rounded-2xl md:rounded-3xl shadow-[0_0_30px_rgba(6,182,212,0.05)] hover:border-cyan-500/50 transition-colors group flex md:block items-center gap-4 md:gap-0 cursor-pointer overflow-hidden relative"
+              >
+                <motion.div 
+                  className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-transparent opacity-0"
+                  variants={{ hover: { opacity: 1 } }}
+                  transition={{ duration: 0.3 }}
+                />
+                <div className="shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-indigo-500/10 flex items-center justify-center md:mb-6 relative overflow-hidden">
+                  <Globe className="text-indigo-400 w-6 h-6 md:w-7 md:h-7 relative z-10" />
+                  <motion.div 
+                    className="absolute inset-0 bg-gradient-to-t from-indigo-500/40 to-transparent"
+                    variants={{
+                      initial: { y: '100%' },
+                      hover: { y: ['100%', '-100%'], transition: { duration: 1.5, repeat: Infinity, ease: "linear" } }
+                    }}
+                  />
                 </div>
-                <div>
+                <div className="relative z-10">
                   <h3 className="text-sm md:text-2xl font-bold text-white mb-0.5 md:mb-3 leading-tight">Customers see inventory online</h3>
                   <p className="text-slate-400 text-xs md:text-lg leading-snug">Full transparency builds ultimate trust and drives sales.</p>
                 </div>
-              </div>
+              </motion.div>
 
             </div>
           </div>
